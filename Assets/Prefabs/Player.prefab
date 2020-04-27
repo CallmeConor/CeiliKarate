@@ -165,8 +165,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2016703195
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: de197d42ac3f02249948a133a3cb5a27, type: 3}
   m_Color: {r: 0.4301412, g: 1, b: 0.29800004, a: 1}
@@ -191,9 +191,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b177254169a98ab4d8606c71e3647608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  proceedText: {fileID: 0}
   dancePartner: {fileID: 0}
   zone: {fileID: 0}
   canProgress: 0
+  fightingBoss: 0
 --- !u!61 &312794732992641544
 BoxCollider2D:
   m_ObjectHideFlags: 0

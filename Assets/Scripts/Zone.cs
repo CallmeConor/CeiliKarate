@@ -6,6 +6,8 @@ public class Zone : MonoBehaviour
 {
 	BoxCollider2D zoneCollider;
 
+	public AudioClip bossSong;
+
 	public List<DancePartner> dancePartners;
 
 	Player player;
@@ -51,6 +53,13 @@ public class Zone : MonoBehaviour
 			if (player)
 			{
 				player.SetPlayerZone(this);
+				if(name.Contains("Boss"))
+				{
+					player.fightingBoss = true;
+					Debug.Log("New beat tempo: " + (150.0f / 60.0f));
+					BeatManager.Instance.SongTempo = 150.0f / 60.0f;
+					BeatManager.Instance.SetSong(bossSong);
+				}
 			}
 		}
 		DancePartner dancePartner = other.GetComponent<DancePartner>();

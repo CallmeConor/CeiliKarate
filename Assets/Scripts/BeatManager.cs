@@ -29,6 +29,13 @@ public class BeatManager : MonoBehaviour
 	{
 		if (!songWarmpupOver) { songWarmpupOver = true; }
 
-		Instantiate(BeatRef, (BeatRef.transform.position + (Camera.main.gameObject.transform.position.x * Vector3.right) - Vector3.left * SongTempo * Time.deltaTime), Quaternion.identity);
+		Instantiate(BeatRef, (BeatRef.transform.position + (Camera.main.gameObject.transform.position.x * Vector3.right)/* - Vector3.left * SongTempo * Time.deltaTime*/), Quaternion.identity);
+	}
+
+	public void SetSong(AudioClip song)
+	{
+		AudioSource source = GetComponent<AudioSource>();
+		source.clip = song;
+		source.Play();
 	}
 }
